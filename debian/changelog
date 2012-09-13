@@ -1,0 +1,5 @@
+libgbm (9.0.0-1) precise; urgency=low
+
+  * libgbm: gbm frontend used by weston compositor
+
+ -- Xavier Boudet <x-boudet@ti.com>  Thu, 13 Sep 2012 10:39:15 +0200
