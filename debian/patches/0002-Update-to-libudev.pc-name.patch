@@ -9,11 +9,11 @@ Signed-off-by: Xavier Boudet <x-boudet@ti.com>
  configure.ac |    2 +-
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/Makefile.am b/Makefile.am
-index 740ea6e..b14a081 100644
---- a/Makefile.am
-+++ b/Makefile.am
-@@ -6,10 +6,10 @@ libgbm_la_SOURCES =	\
+Index: libgbm/Makefile.am
+===================================================================
+--- libgbm.orig/Makefile.am	2012-09-14 16:32:27.203312896 +0200
++++ libgbm/Makefile.am	2012-09-14 16:32:30.691312979 +0200
+@@ -6,10 +6,10 @@
  	common.c
  
  libgbm_la_LIBADD =	\
@@ -26,19 +26,18 @@ index 740ea6e..b14a081 100644
  	-D_OS_UNIX=1	\
  	-DMODULEDIR='"$(exec_prefix)/lib/gbm"'
  
-diff --git a/configure.ac b/configure.ac
-index 2739092..3bdec23 100644
---- a/configure.ac
-+++ b/configure.ac
-@@ -35,7 +35,7 @@ AM_MAINTAINER_MODE
+Index: libgbm/configure.ac
+===================================================================
+--- libgbm.orig/configure.ac	2012-09-14 16:32:27.203312896 +0200
++++ libgbm/configure.ac	2012-09-14 16:35:09.163316758 +0200
+@@ -35,8 +35,8 @@
  AC_PROG_LIBTOOL
  
  # Obtain compiler/linker options for dependencies
 -PKG_CHECK_MODULES(UDEV, udev)
-+PKG_CHECK_MODULES(LIBUDEV, libudev)
- PKG_CHECK_MODULES(DRM, libdrm)
+-PKG_CHECK_MODULES(DRM, libdrm)
++PKG_CHECK_MODULES([LIBUDEV], [libudev])
++PKG_CHECK_MODULES([DRM], [libdrm])
  
  AC_CONFIG_FILES([Makefile gbm.pc])
--- 
-1.7.9.5
-
+ AC_OUTPUT
