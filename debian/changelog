@@ -1,3 +1,9 @@
+libgbm (9.0.0-5) precise; urgency=low
+
+  * Update control
+
+ -- Xavier Boudet <x-boudet@ti.com>  Fri, 14 Sep 2012 17:05:24 +0200
+
 libgbm (9.0.0-4) precise; urgency=low
 
   * Update configure.ac check modules
