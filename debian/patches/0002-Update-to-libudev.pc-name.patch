@@ -1,0 +1,44 @@
+From ca2edcf8fd394f77005ed5a4af4aef3b93fc5a1c Mon Sep 17 00:00:00 2001
+From: Xavier Boudet <x-boudet@ti.com>
+Date: Fri, 14 Sep 2012 15:53:08 +0200
+Subject: [PATCH 2/2] Update to libudev.pc name
+
+Signed-off-by: Xavier Boudet <x-boudet@ti.com>
+---
+ Makefile.am  |    4 ++--
+ configure.ac |    2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 740ea6e..b14a081 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -6,10 +6,10 @@ libgbm_la_SOURCES =	\
+ 	common.c
+ 
+ libgbm_la_LIBADD =	\
+-	@UDEV_LIBS@
++	@LIBUDEV_LIBS@
+ 
+ libgbm_la_CFLAGS =	\
+-	@UDEV_CFLAGS@	\
++	@LIBUDEV_CFLAGS@	\
+ 	-D_OS_UNIX=1	\
+ 	-DMODULEDIR='"$(exec_prefix)/lib/gbm"'
+ 
+diff --git a/configure.ac b/configure.ac
+index 2739092..3bdec23 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -35,7 +35,7 @@ AM_MAINTAINER_MODE
+ AC_PROG_LIBTOOL
+ 
+ # Obtain compiler/linker options for dependencies
+-PKG_CHECK_MODULES(UDEV, udev)
++PKG_CHECK_MODULES(LIBUDEV, libudev)
+ PKG_CHECK_MODULES(DRM, libdrm)
+ 
+ AC_CONFIG_FILES([Makefile gbm.pc])
+-- 
+1.7.9.5
+
