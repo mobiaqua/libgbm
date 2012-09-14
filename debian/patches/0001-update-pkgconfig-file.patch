@@ -1,0 +1,26 @@
+From 9013367c42dd27335fee8edc420b6bef3996190d Mon Sep 17 00:00:00 2001
+From: Rob Clark <rob@ti.com>
+Date: Mon, 3 Sep 2012 15:23:46 +0000
+Subject: [PATCH] update pkgconfig file
+
+Need to add libdl/libudev dependencies.
+---
+ gbm.pc.in |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/gbm.pc.in b/gbm.pc.in
+index 1234841..d7708c7 100644
+--- a/gbm.pc.in
++++ b/gbm.pc.in
+@@ -5,6 +5,8 @@ includedir=@includedir@
+ 
+ Name: gbm
+ Description: gbm library
++Requires.private: libudev
+ Version: @PACKAGE_VERSION@
+ Libs: -L${libdir} -lgbm
++Libs.private: -ldl
+ Cflags: -I${includedir}/gbm
+-- 
+1.7.9.5
+
