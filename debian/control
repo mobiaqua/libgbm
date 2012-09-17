@@ -12,7 +12,8 @@ Build-Depends: cdbs,
                libudev-dev,
                pkg-config
 Standards-Version: 3.9.2
-Homepage: http://github.com/robclark/omapdrmtest
+Homepage: git://github.com/robclark/libgbm.git
+Vcs-Git: git://gitorious.org/ubuntu-omap/libgbm.git
 
 Package: libgbm1
 Section: libs
