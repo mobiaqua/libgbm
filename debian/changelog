@@ -1,3 +1,9 @@
+libgbm (9.0.0-6) precise; urgency=low
+
+  * Update Vcs-Git
+
+ -- Xavier Boudet <x-boudet@ti.com>  Mon, 17 Sep 2012 19:17:52 +0200
+
 libgbm (9.0.0-5) precise; urgency=low
 
   * Update control
