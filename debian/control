@@ -19,9 +19,10 @@ Package: libgbm1
 Section: libs
 Architecture: armhf
 Priority: optional
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-	 pvr-omap4 | sgx-lib
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Pre-Depends: ${misc:Pre-Depends}
 Description: generic buffer management API -- runtime
  This is the gbm frontend used by (for example) weston compositor to
  load the GLES stack, and retrieve the backing buffer objects behind
