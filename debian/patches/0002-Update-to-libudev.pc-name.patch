@@ -1,19 +1,22 @@
-From ca2edcf8fd394f77005ed5a4af4aef3b93fc5a1c Mon Sep 17 00:00:00 2001
 From: Xavier Boudet <x-boudet@ti.com>
 Date: Fri, 14 Sep 2012 15:53:08 +0200
-Subject: [PATCH 2/2] Update to libudev.pc name
+Subject: Update to libudev.pc name
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Xavier Boudet <x-boudet@ti.com>
+Signed-off-by: Vincent Stehlé <v-stehle@ti.com>
 ---
  Makefile.am  |    4 ++--
- configure.ac |    2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
+ configure.ac |    4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
-Index: libgbm/Makefile.am
-===================================================================
---- libgbm.orig/Makefile.am	2012-09-14 16:32:27.203312896 +0200
-+++ libgbm/Makefile.am	2012-09-14 16:32:30.691312979 +0200
-@@ -6,10 +6,10 @@
+diff --git a/Makefile.am b/Makefile.am
+index 740ea6e..b14a081 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -6,10 +6,10 @@ libgbm_la_SOURCES =	\
  	common.c
  
  libgbm_la_LIBADD =	\
@@ -26,11 +29,11 @@ Index: libgbm/Makefile.am
  	-D_OS_UNIX=1	\
  	-DMODULEDIR='"$(exec_prefix)/lib/gbm"'
  
-Index: libgbm/configure.ac
-===================================================================
---- libgbm.orig/configure.ac	2012-09-14 16:32:27.203312896 +0200
-+++ libgbm/configure.ac	2012-09-14 16:35:09.163316758 +0200
-@@ -35,8 +35,8 @@
+diff --git a/configure.ac b/configure.ac
+index 2739092..a6ddfd9 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -35,8 +35,8 @@ AM_MAINTAINER_MODE
  AC_PROG_LIBTOOL
  
  # Obtain compiler/linker options for dependencies
@@ -41,3 +44,4 @@ Index: libgbm/configure.ac
  
  AC_CONFIG_FILES([Makefile gbm.pc])
  AC_OUTPUT
+-- 

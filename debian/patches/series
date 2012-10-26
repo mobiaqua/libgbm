@@ -1,2 +1,3 @@
 0001-update-pkgconfig-file.patch
 0002-Update-to-libudev.pc-name.patch
+0003-Makefile.am-add-version-info.patch

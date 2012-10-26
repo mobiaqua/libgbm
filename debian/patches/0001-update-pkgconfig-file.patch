@@ -1,9 +1,13 @@
-From 9013367c42dd27335fee8edc420b6bef3996190d Mon Sep 17 00:00:00 2001
 From: Rob Clark <rob@ti.com>
 Date: Mon, 3 Sep 2012 15:23:46 +0000
-Subject: [PATCH] update pkgconfig file
+Subject: update pkgconfig file
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Need to add libdl/libudev dependencies.
+
+Signed-off-by: Vincent Stehlé <v-stehle@ti.com>
 ---
  gbm.pc.in |    2 ++
  1 file changed, 2 insertions(+)
@@ -22,5 +26,3 @@ index 1234841..d7708c7 100644
 +Libs.private: -ldl
  Cflags: -I${includedir}/gbm
 -- 
-1.7.9.5
-
