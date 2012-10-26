@@ -1,3 +1,12 @@
+libgbm (9.0.0-8) precise; urgency=low
+
+  * Remove untracked files
+  * gitignore
+  * Allow build for any architecture
+  * Add patch to produce libgbm.so.1.0.0
+
+ -- Vincent Stehlé <v-stehle@ti.com>  Fri, 26 Oct 2012 14:27:32 +0200
+
 libgbm (9.0.0-7) precise; urgency=low
 
   * Update control
