@@ -312,11 +312,11 @@ gbm_bo_get_device(struct gbm_bo *bo)
  * \param bo The buffer object
  * \return Returns the handle of the allocated buffer object
  */
-/*GBM_EXPORT union gbm_bo_handle
+GBM_EXPORT union gbm_bo_handle
 gbm_bo_get_handle(struct gbm_bo *bo)
 {
    return bo->handle;
-}*/
+}
 
 /** Get a DMA-BUF file descriptor for the buffer object
  *
