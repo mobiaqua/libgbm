@@ -30,6 +30,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <linux/limits.h>
 #include <dlfcn.h>
 
 #include "backend.h"
@@ -40,8 +41,6 @@
  * directory..
  */
 static const char *backends[] = {
-      "gbm_dri.so",
-      "gbm_gallium_drm.so",
       "gbm_pvr.so",
 };
 

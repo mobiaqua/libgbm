@@ -31,8 +31,6 @@
 #include "gbmint.h"
 
 enum gbm_drm_driver_type {
-   GBM_DRM_DRIVER_TYPE_DRI,
-   GBM_DRM_DRIVER_TYPE_GALLIUM,
    GBM_DRM_DRIVER_TYPE_CUSTOM,    /* catch-all for non-mesa drivers */
 };
 
