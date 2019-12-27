@@ -2,14 +2,11 @@ lib_LTLIBRARIES = libgbm.la
 
 libgbm_la_SOURCES =	\
 	gbm.c		\
-	backend.c	\
-	common.c
+	backend.c
 
-libgbm_la_LIBADD =	\
-	@LIBUDEV_LIBS@
+libgbm_la_LIBADD =
 
 libgbm_la_CFLAGS =	\
-	@LIBUDEV_CFLAGS@	\
 	-D_OS_UNIX=1	\
 	-DMODULEDIR='"$(exec_prefix)/lib/gbm"'
 
@@ -18,8 +15,7 @@ libgbm_la_LDFLAGS = -version-info 1:0:0
 extdir = $(includedir)/gbm
 ext_HEADERS =		\
 	gbm.h		\
-	gbmint.h	\
-	common_drm.h
+	gbmint.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = gbm.pc

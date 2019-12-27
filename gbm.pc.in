@@ -5,7 +5,6 @@ includedir=@includedir@
 
 Name: gbm
 Description: gbm library
-Requires.private: libudev
 Version: @PACKAGE_VERSION@
 Libs: -L${libdir} -lgbm
 Libs.private: -ldl
