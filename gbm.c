@@ -91,13 +91,13 @@ gbm_device_is_format_supported(struct gbm_device *gbm,
  * \param format The format to query
  * \param modifier The modifier to query
  */
-GBM_EXPORT int
+/*GBM_EXPORT int
 gbm_device_get_format_modifier_plane_count(struct gbm_device *gbm,
                                            uint32_t format,
                                            uint64_t modifier)
 {
    return gbm->get_format_modifier_plane_count(gbm, format, modifier);
-}
+}*/
 
 /** Destroy the gbm device and free all resources associated with it.
  *
