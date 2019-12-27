@@ -91,13 +91,13 @@ gbm_device_is_format_supported(struct gbm_device *gbm,
  * \param format The format to query
  * \param modifier The modifier to query
  */
-/*GBM_EXPORT int
+GBM_EXPORT int
 gbm_device_get_format_modifier_plane_count(struct gbm_device *gbm,
                                            uint32_t format,
                                            uint64_t modifier)
 {
    return gbm->get_format_modifier_plane_count(gbm, format, modifier);
-}*/
+}
 
 /** Destroy the gbm device and free all resources associated with it.
  *
@@ -179,8 +179,7 @@ gbm_bo_get_height(struct gbm_bo *bo)
 GBM_EXPORT uint32_t
 gbm_bo_get_stride(struct gbm_bo *bo)
 {
-   return bo->stride;
-//   return gbm_bo_get_stride_for_plane(bo, 0);
+   return gbm_bo_get_stride_for_plane(bo, 0);
 }
 
 /** Get the stride for the given plane
@@ -190,11 +189,11 @@ gbm_bo_get_stride(struct gbm_bo *bo)
  *
  * \sa gbm_bo_get_stride()
  */
-/*GBM_EXPORT uint32_t
+GBM_EXPORT uint32_t
 gbm_bo_get_stride_for_plane(struct gbm_bo *bo, int plane)
 {
    return bo->gbm->bo_get_stride(bo, plane);
-}*/
+}
 
 /** Get the format of the buffer object
  *
@@ -287,11 +286,11 @@ gbm_bo_get_bpp(struct gbm_bo *bo)
  * \param bo The buffer object
  * \return The offset
  */
-/*GBM_EXPORT uint32_t
+GBM_EXPORT uint32_t
 gbm_bo_get_offset(struct gbm_bo *bo, int plane)
 {
    return bo->gbm->bo_get_offset(bo, plane);
-}*/
+}
 
 /** Get the gbm device used to create the buffer object
  *
@@ -329,22 +328,22 @@ gbm_bo_get_handle(struct gbm_bo *bo)
  * \return Returns a file descriptor referring to the underlying buffer or -1
  * if an error occurs.
  */
-/*GBM_EXPORT int
+GBM_EXPORT int
 gbm_bo_get_fd(struct gbm_bo *bo)
 {
    return bo->gbm->bo_get_fd(bo);
-}*/
+}
 
 /** Get the number of planes for the given bo.
  *
  * \param bo The buffer object
  * \return The number of planes
  */
-/*GBM_EXPORT int
+GBM_EXPORT int
 gbm_bo_get_plane_count(struct gbm_bo *bo)
 {
    return bo->gbm->bo_get_planes(bo);
-}*/
+}
 
 /** Get the handle for the specified plane of the buffer object
  *
@@ -358,11 +357,11 @@ gbm_bo_get_plane_count(struct gbm_bo *bo)
  *
  * \sa gbm_bo_get_handle()
  */
-/*GBM_EXPORT union gbm_bo_handle
+GBM_EXPORT union gbm_bo_handle
 gbm_bo_get_handle_for_plane(struct gbm_bo *bo, int plane)
 {
    return bo->gbm->bo_get_handle(bo, plane);
-}*/
+}
 
 /**
  * Get the chosen modifier for the buffer object
@@ -377,11 +376,11 @@ gbm_bo_get_handle_for_plane(struct gbm_bo *bo, int plane)
  * \sa gbm_surface_create_with_modifiers() where possible modifiers are set
  * \sa define DRM_FORMAT_MOD_* in drm_fourcc.h for possible modifiers
  */
-/*GBM_EXPORT uint64_t
+GBM_EXPORT uint64_t
 gbm_bo_get_modifier(struct gbm_bo *bo)
 {
    return bo->gbm->bo_get_modifier(bo);
-}*/
+}
 
 /** Write data into the buffer object
  *
@@ -552,7 +551,7 @@ gbm_bo_import(struct gbm_device *gbm,
  *
  * \sa enum gbm_bo_transfer_flags for the list of flags
  */
-/*GBM_EXPORT void *
+GBM_EXPORT void *
 gbm_bo_map(struct gbm_bo *bo,
               uint32_t x, uint32_t y,
               uint32_t width, uint32_t height,
@@ -565,7 +564,7 @@ gbm_bo_map(struct gbm_bo *bo,
 
    return bo->gbm->bo_map(bo, x, y, width, height,
                           flags, stride, map_data);
-}*/
+}
 
 /**
  * Unmap a previously mapped region of a gbm buffer object
@@ -576,11 +575,11 @@ gbm_bo_map(struct gbm_bo *bo,
  * \param bo The buffer object
  * \param map_data opaque ptr returned from prior gbm_bo_map
  */
-/*GBM_EXPORT void
+GBM_EXPORT void
 gbm_bo_unmap(struct gbm_bo *bo, void *map_data)
 {
    bo->gbm->bo_unmap(bo, map_data);
-}*/
+}
 
 /**
  * Allocate a surface object
