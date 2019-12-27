@@ -63,10 +63,10 @@ load_backend(const struct backend_desc *backend)
    if (backend->builtin) {
       init = backend->builtin;
    } else {
-      if (name[0] != '/')
-         snprintf(path, sizeof(path), MODULEDIR "/%s", name);
+      if (backend->name[0] != '/')
+         snprintf(path, sizeof(path), MODULEDIR "/%s", backend->name);
       else
-         snprintf(path, sizeof(path), "%s", name);
+         snprintf(path, sizeof(path), "%s", backend->name);
 
       module = dlopen(path, RTLD_NOW | RTLD_GLOBAL);
       if (!module) {
