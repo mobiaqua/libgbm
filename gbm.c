@@ -301,7 +301,7 @@ gbm_bo_get_offset(struct gbm_bo *bo, int plane)
 GBM_EXPORT struct gbm_device *
 gbm_bo_get_device(struct gbm_bo *bo)
 {
-	return bo->gbm;
+    return bo->gbm;
 }
 
 /** Get the handle of the buffer object
