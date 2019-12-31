@@ -471,7 +471,7 @@ gbm_bo_create(struct gbm_device *gbm,
       return NULL;
    }
 
-   return gbm->bo_create(gbm, width, height, format, usage/*, NULL, 0*/);
+   return gbm->bo_create(gbm, width, height, format, usage, NULL, 0);
 }
 
 GBM_EXPORT struct gbm_bo *
@@ -491,7 +491,7 @@ gbm_bo_create_with_modifiers(struct gbm_device *gbm,
       return NULL;
    }
 
-   return gbm->bo_create(gbm, width, height, format, 0/*, modifiers, count*/);
+   return gbm->bo_create(gbm, width, height, format, 0, modifiers, count);
 }
 
 /**
@@ -600,7 +600,7 @@ gbm_surface_create(struct gbm_device *gbm,
                    uint32_t width, uint32_t height,
 		   uint32_t format, uint32_t flags)
 {
-   return gbm->surface_create(gbm, width, height, format, flags/*, NULL, 0*/);
+   return gbm->surface_create(gbm, width, height, format, flags, NULL, 0);
 }
 
 GBM_EXPORT struct gbm_surface *
@@ -615,8 +615,8 @@ gbm_surface_create_with_modifiers(struct gbm_device *gbm,
       return NULL;
    }
 
-   return gbm->surface_create(gbm, width, height, format, 0/*,
-                              modifiers, count*/);
+   return gbm->surface_create(gbm, width, height, format, 0,
+                              modifiers, count);
 }
 
 /**
