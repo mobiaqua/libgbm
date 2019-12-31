@@ -45,7 +45,7 @@ struct backend_desc {
 };
 
 static const struct backend_desc backends[] = {
-//   { "gbm_pvr.so", &gbm_pvr_backend },
+   { "gbm_pvr.so", &gbm_pvr_backend },
    { "gbm_pvr.so", NULL },
 };
 

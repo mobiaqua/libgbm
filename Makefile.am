@@ -1,4 +1,4 @@
-lib_LTLIBRARIES = libgbm.la
+lib_LTLIBRARIES = libgbm.la gbm_pvr.la pvrws_GBM.la
 
 libgbm_la_SOURCES =	\
 	gbm.c		\
@@ -19,3 +19,17 @@ ext_HEADERS =		\
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = gbm.pc
+
+gbm_pvr_la_SOURCES=	\
+	gbm_pvr.c \
+	gbm_pvrint.h
+
+gbm_pv_la_CFLAGS =	\
+	-D_OS_UNIX=1
+
+pvrws_GBM_la_SOURCES=	\
+	pvrws_GBM.c \
+	pvrws_GBM.h
+
+pvrws_GBM_la_CFLAGS =	\
+	-D_OS_UNIX=1
