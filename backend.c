@@ -70,6 +70,9 @@ load_backend(const struct backend_desc *backend)
          fprintf(stderr, "failed to load module: %s\n", dlerror());
       }
       init = dlsym(module, entrypoint);
+      if (!init) {
+         fprintf(stderr, "failed to find symbol: %s\n", dlerror());
+      }
    }
 
    return init;
