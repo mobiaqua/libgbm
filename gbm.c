@@ -300,7 +300,7 @@ gbm_bo_get_offset(struct gbm_bo *bo, int plane)
 GBM_EXPORT struct gbm_device *
 gbm_bo_get_device(struct gbm_bo *bo)
 {
-    return bo->gbm;
+	return bo->gbm;
 }
 
 /** Get the handle of the buffer object
@@ -533,6 +533,11 @@ gbm_bo_import(struct gbm_device *gbm,
  *
  * This function maps a region of a gbm bo for cpu read and/or write
  * access.
+ *
+ * The mapping exposes a linear view of the buffer object even if the buffer
+ * has a non-linear modifier.
+ *
+ * This function may require intermediate buffer copies (ie. it may be slow).
  *
  * \param bo The buffer object
  * \param x The X (top left origin) starting position of the mapped region for
