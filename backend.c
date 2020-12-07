@@ -68,6 +68,7 @@ load_backend(const struct backend_desc *backend)
       module = dlopen(path, RTLD_NOW | RTLD_GLOBAL);
       if (!module) {
          fprintf(stderr, "failed to load module: %s\n", dlerror());
+         return init;
       }
       init = dlsym(module, entrypoint);
       if (!init) {
