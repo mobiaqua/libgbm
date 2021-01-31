@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: gbm
 Description: gbm library
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} -lgbm
+Libs: -L${libdir} -lgbm -ldl
 Libs.private: -ldl
 Cflags: -I${includedir}/gbm
