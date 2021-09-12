@@ -10,7 +10,7 @@ libgbm_la_CFLAGS =	\
 	-D_OS_UNIX=1	\
 	-DMODULEDIR='"$(exec_prefix)/lib/gbm"'
 
-libgbm_la_LDFLAGS = -version-info 20:3:0
+libgbm_la_LDFLAGS = -version-info 21:2:0
 
 extdir = $(includedir)/gbm
 ext_HEADERS =		\
