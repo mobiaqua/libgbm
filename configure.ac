@@ -22,20 +22,26 @@
 
 # Initialize Autoconf
 AC_PREREQ([2.60])
-AC_INIT([libgbm], [21.2.0],
-        [https://bugs.freedesktop.org/enter_bug.cgi?product=wayland], [libgbm])
+AC_INIT([libgbm], [22.2.0], [https://www.mesa3d.org], [libgbm])
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_HEADERS([config.h])
 
 # Initialize Automake
-AM_INIT_AUTOMAKE([foreign dist-bzip2])
+AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
+
+dnl find a compiler
+AC_PROG_CC
 
 # Initialize libtool
 AC_PROG_LIBTOOL
 
-# Obtain compiler/linker options for dependencies
-PKG_CHECK_MODULES([DRM], [libdrm])
+dnl Check for pkgconfig first
+AC_CHECK_PROG([HAVE_PKGCONFIG], [pkg-config], [yes], [no])
+
+dnl *** checks for libraries ***
+dnl Check for libdrm
+PKG_CHECK_MODULES(DRM, libdrm)
 
 AC_CONFIG_FILES([Makefile gbm.pc])
 AC_OUTPUT

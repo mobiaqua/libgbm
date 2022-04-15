@@ -1,6 +1,0 @@
-This is the gbm frontend used by (for example) weston compositor to
-load the GLES stack, and retrieve the backing buffer objects behind
-an eglImage (created with EGL_WAYLAND_BUFFER_WL), etc.
-
-The frontend is really just a backend loader and shim.  The backend
-library must be provided by the GLES implementation.
