@@ -12,7 +12,7 @@ libgbm_la_CFLAGS =	\
 	-DDEFAULT_BACKENDS_PATH='"$(exec_prefix)/lib/gbm"' \
 	$(WARN_CFLAGS) $(CFLAGS) $(DRM_CFLAGS)
 
-libgbm_la_LDFLAGS = -no-undefined -version-info 22:2:0
+libgbm_la_LDFLAGS = -no-undefined -version-info 22:4:0
 
 extdir = $(includedir)/gbm
 ext_HEADERS =		\

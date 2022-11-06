@@ -22,7 +22,7 @@
 
 # Initialize Autoconf
 AC_PREREQ([2.60])
-AC_INIT([libgbm], [22.2.0], [https://www.mesa3d.org], [libgbm])
+AC_INIT([libgbm], [22.4.0], [https://www.mesa3d.org], [libgbm])
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_HEADERS([config.h])
 
